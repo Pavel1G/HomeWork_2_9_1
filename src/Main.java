@@ -59,7 +59,7 @@ public class Main {
         Map<String, Integer> newMap = new HashMap<>();
         for (Map.Entry<String, ArrayList<Integer>> str : map.entrySet()) {
 //            Я не знаю как обработать коллекцию, чтобы получить сумму. Пытался вытащить коллекцию, а потом через
-//            итератор посчитать сумму (даже метод отельный написал - строки 75 - 80.
+//            итератор посчитать сумму (даже метод отельный написал - строки 75 - 80).
             newMap.put(str.getKey(), sumOfValue(str.getValue()));
         }
         System.out.println("Новая коллекция - " + map);
@@ -82,9 +82,10 @@ public class Main {
     }
 
     public static int sumOfValue(ArrayList<Integer> values) {
-        Integer sum = 0;
-        for (Integer value : values) {
-            sum += value;
+        int sum = 0;
+        Iterator<Integer> valuesIter = values.iterator();
+        while (valuesIter.hasNext()){
+            sum += valuesIter.next().intValue();
         }
         return sum;
     }
