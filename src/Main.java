@@ -62,7 +62,7 @@ public class Main {
 //            итератор посчитать сумму (даже метод отельный написал - строки 75 - 80).
             newMap.put(str.getKey(), sumOfValue(str.getValue()));
         }
-        System.out.println("Новая коллекция - " + map);
+        System.out.println("Новая коллекция - " + newMap);
     }
 
     public static void part05() {
@@ -85,7 +85,7 @@ public class Main {
         int sum = 0;
         Iterator<Integer> valuesIter = values.iterator();
         while (valuesIter.hasNext()){
-            sum += valuesIter.next().intValue();
+            sum += valuesIter.next();
         }
         return sum;
     }
